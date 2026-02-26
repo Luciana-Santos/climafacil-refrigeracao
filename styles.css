@@ -69,6 +69,11 @@ a {
   }
 }
 
+.title {
+  font-size: clamp(22px, 4vw, 26px);
+  font-weight: 600;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -218,9 +223,97 @@ a {
   }
 }
 
+.testimonials-container {
+  display: grid;
+  gap: 3.75rem;
+
+  .testimonials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .testimonials-item:first-child {
+    background: var(--white);
+    padding-block: 60px;
+    box-shadow: 0 4px 4px rgba(11, 60, 93, 0.2);
+
+    i,
+    p,
+    h4 {
+      color: var(--gray-900);
+    }
+  }
+
+  .testimonials-item {
+    padding: 40px;
+    display: grid;
+    gap: 20px;
+    max-height: 100%;
+    background: rgba(255, 255, 255, 70%);
+    border-radius: 10px;
+
+    i,
+    p,
+    h4 {
+      color: var(--gray-500);
+    }
+  }
+}
+
+.testimonials {
+  background: var(--off-white);
+  padding-block: clamp(60px, 12vw, 70px);
+}
+
+.pain_points {
+  padding-block: clamp(60px, 12vw, 70px);
+  display: grid;
+  gap: 60px;
+
+  .pain_points-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .pain_points-item:nth-child(even) {
+    background-color: var(--off-white);
+  }
+
+  .pain_points-item {
+    display: grid;
+    gap: 30px;
+    padding-block: 40px;
+    padding-inline: 30px;
+    border-radius: 10px;
+
+    .icon {
+      color: var(--blue-700);
+      width: 1.3em;
+      height: 1.3em;
+    }
+
+    .pain_points-info {
+      display: grid;
+      gap: 20px;
+      padding-left: 20px;
+      border-left: 2px solid var(--blue-700);
+
+      h3 {
+        font-weight: 600;
+        color: var(--blue-700);
+      }
+
+      p {
+      }
+    }
+  }
+}
+
 @media (min-width: 760px) {
   .header-container {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 10%;
     position: fixed;
