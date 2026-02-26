@@ -513,6 +513,37 @@ a {
   }
 }
 
+.final-cta_container {
+  background: var(--gray-900);
+}
+
+.final-cta {
+  padding-block: clamp(3.75rem, 12vw, 4.375rem);
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+
+  .final-cta_info {
+    display: grid;
+    gap: 1.25rem;
+    color: var(--off-white);
+
+    h2 {
+      font-weight: 600;
+    }
+  }
+
+  .final-cta_action {
+    display: grid;
+    gap: 0.625rem;
+
+    span {
+      color: var(--off-white);
+      font-size: 0.75rem;
+    }
+  }
+}
+
 @media (min-width: 760px) {
   .header-container {
     background: rgba(0, 0, 0, 0.2);
@@ -658,6 +689,18 @@ a {
         span {
           justify-self: end;
         }
+      }
+    }
+  }
+
+  .final-cta {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .final-cta_action {
+      span {
+        text-align: right;
       }
     }
   }
